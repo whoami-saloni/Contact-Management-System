@@ -1,0 +1,52 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<div class="card p-4 shadow-sm">
+
+    <h5 class="mb-3">
+        {{ "Edit Contact" if contact else "Add Contact" }}
+    </h5>
+
+    <form method="POST">
+
+        <div class="row">
+            <div class="col-md-6 mb-3">
+                <input name="first" 
+                       value="{{ contact.first if contact else '' }}"
+                       placeholder="First Name" 
+                       class="form-control" required>
+            </div>
+
+            <div class="col-md-6 mb-3">
+                <input name="last" 
+                       value="{{ contact.last if contact else '' }}"
+                       placeholder="Last Name" 
+                       class="form-control" required>
+            </div>
+        </div>
+
+        
+
+        <div class="mb-3">
+            <input name="phone" 
+                   value="{{ contact.phone if contact else '' }}"
+                   placeholder="Phone" 
+                   class="form-control" required>
+        </div>
+
+        <div class="mb-3">
+            <textarea name="address" 
+                      class="form-control"
+                      placeholder="Address">{{ contact.address if contact else '' }}</textarea>
+        </div>
+
+        <button class="btn btn-success">
+            {{ "Update" if contact else "Save" }}
+        </button>
+        <a href="/" class="btn btn-secondary">Cancel</a>
+
+    </form>
+
+</div>
+
+{% endblock %}

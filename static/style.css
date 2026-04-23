@@ -1,0 +1,35 @@
+body {
+    font-family: Arial;
+    margin: 40px;
+    background: #f4f4f4;
+}
+
+.container {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+.btn {
+    background: blue;
+    color: white;
+    padding: 10px;
+    text-decoration: none;
+}
+
+form input {
+    display: block;
+    margin: 10px 0;
+    padding: 8px;
+    width: 100%;
+}

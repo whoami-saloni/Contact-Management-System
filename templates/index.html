@@ -1,0 +1,41 @@
+
+{% extends 'base.html' %}
+{% block content %}
+
+<div class="card p-4 shadow-sm">
+
+    <div class="d-flex justify-content-between mb-3">
+        <h5>All Contacts</h5>
+        <a href="/add" class="btn btn-primary">+ Add Contact</a>
+    </div>
+
+    <table class="table table-hover align-middle">
+        <thead class="table-light">
+            <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Phone</th>
+                <th>Address</th>
+                <th class="text-center">Actions</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            {% for c in contacts %}
+            <tr>
+                <td><strong>{{ c.first }} {{ c.last }}</strong></td>
+                <td>{{ c.email }}</td>
+                <td>{{ c.phone }}</td>
+                <td>{{ c.address }}</td>
+                <td class="text-center">
+                    <a href="/edit/{{c.id}}" class="btn btn-sm btn-warning">Edit</a>
+                    <a href="/delete/{{c.id}}" class="btn btn-sm btn-danger">Delete</a>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+</div>
+
+{% endblock %}

@@ -42,6 +42,8 @@ This application allows users to perform full CRUD operations with proper valida
 
 ---
 ## 📖 Usage
+
+
 # ➕ Create Contact
 - Click Add Contact
 - Enter details
@@ -60,6 +62,7 @@ This application allows users to perform full CRUD operations with proper valida
 
 ## 🎥 Demo Video
 
+
 The following functionalities are demonstrated in the video:
 
 - Create a record
@@ -71,6 +74,8 @@ The following functionalities are demonstrated in the video:
 ---
 
 ## Why This Stack?
+
+
 - **Flask**: Lightweight and fast for backend development
 - **Bootstrap**: Quick and responsive UI design
 - **SQLite**: Simple and easy for development
@@ -80,6 +85,8 @@ The following functionalities are demonstrated in the video:
 ---
 
 ## ⚠️ Challenges Faced
+
+
 - Handling form validation and displaying error messages
 - Debugging Jinja template issues
 - Managing database connections
@@ -88,6 +95,8 @@ The following functionalities are demonstrated in the video:
 ---
 
 ## 🚀 Future Improvements
+
+
 - 🔍 Search functionality
 - 🔐 User authentication system
 - 📄 Pagination
@@ -96,5 +105,6 @@ The following functionalities are demonstrated in the video:
 ---
 
 ## 👩‍💻 Author
+
 
 Saloni Sahal

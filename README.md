@@ -1,5 +1,5 @@
 # 📇 Contact Management System
- **Live Demo:** [Link](https://contact-management-system-xo5v.onrender.com)
+ **Live Project:** [Link](https://contact-management-system-xo5v.onrender.com)
 
 A simple and user-friendly Contact Management Application built using Flask.  
 This application allows users to perform full CRUD operations with proper validation.
@@ -76,16 +76,25 @@ The following functionalities are demonstrated in the video:
 - **SQLite**: Simple and easy for development
 - **PostgreSQL**: Suitable for production environments
 - **Flask-SQLAlchemy**: Simplifies database operations
+
+---
+
 ## ⚠️ Challenges Faced
 - Handling form validation and displaying error messages
 - Debugging Jinja template issues
 - Managing database connections
 - Deployment configuration on Render
+
+---
+
 ## 🚀 Future Improvements
 - 🔍 Search functionality
 - 🔐 User authentication system
 - 📄 Pagination
 - 🌐 REST API integration
+
+---
+
 ## 👩‍💻 Author
 
 Saloni Sahal

@@ -15,6 +15,9 @@ class Contact(db.Model):
     email = db.Column(db.String(100), unique=True)
     phone = db.Column(db.String(15))
 
+with app.app_context():
+    db.create_all()
+
 def valid_email(email):
     return re.match(r"[^@]+@[^@]+\.[^@]+", email)
 

@@ -25,12 +25,18 @@
             </div>
         </div>
 
-        
-
         <div class="mb-3">
             <input name="phone" 
                    value="{{ contact.phone if contact else '' }}"
                    placeholder="Phone" 
+                   class="form-control" required>
+        </div>
+
+        <div class="mb-3">
+            <input type="email"
+                   name="email" 
+                   value="{{ contact.email if contact else '' }}"
+                   placeholder="Email" 
                    class="form-control" required>
         </div>
 
@@ -47,6 +53,6 @@
 
     </form>
 
-</div>
+</div>  
 
 {% endblock %}

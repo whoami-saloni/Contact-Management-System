@@ -19,7 +19,7 @@ with app.app_context():
     db.create_all()
 
 def valid_email(email):
-    return re.match(r"[^@]+@[^@]+\.[^@]+", email)
+    return re.match(r'^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$', email)
 
 
 def valid_phone(phone):
@@ -39,7 +39,7 @@ def add():
             flash("Invalid Email Format!", "danger")
             return redirect(url_for('add'))
         if not valid_phone(request.form['phone']):
-            flash("Phone must be 10 digits!", "danger")
+            flash("Phone must be valid", "danger")
             return redirect(url_for('add'))
         if Contact.query.filter_by(email=email).first():
             flash("Email already exists!", "danger")
@@ -66,11 +66,15 @@ def edit(id):
     if request.method == 'POST':
         contact.first = request.form['first']
         contact.last = request.form['last']
+        contact.email = request.form['email']
         contact.address = request.form['address']
         contact.phone = request.form['phone']
 
         if not valid_phone(request.form['phone']):
-            flash("Phone must be 10 digits!", "danger")
+            flash("Phone must be valid!", "danger")
+            return redirect(url_for('add'))
+        if not valid_email(request.form['email']):
+            flash("Email must be valid!", "danger")
             return redirect(url_for('add'))
 
 

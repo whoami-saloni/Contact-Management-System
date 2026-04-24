@@ -2,7 +2,7 @@
  **Live Project:** [Link](https://contact-management-system-xo5v.onrender.com)
 
 A simple and user-friendly Contact Management Application built using Flask.  
-This application allows users to perform full CRUD operations with proper validation.
+This application allows users to perform full CRUD operations with proper validations.
 
 ---
 
